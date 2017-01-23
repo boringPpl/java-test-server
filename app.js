@@ -18,8 +18,8 @@ app.post('/api/test', function (req, res) {
      cp -R __tests/. __users/${b.user_id} &&
      java -cp .:__users/${b.user_id}/${path}:junit-4.12.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore ${file}`,
     function (err, stdout, stderr) {
-      if (!stdout) {
-        return res.status(500).send(err || stderr)
+      if (!stdout || err) {
+        return res.status(500).send(stdout || err || stderr)
       }
 
       res.send(stdout)
