@@ -23,5 +23,5 @@ org.junit.ComparisonFailure: expected:<Hello, world[!]> but was:<Hello, world[]>
 FAILURES!!!
 Tests run: 1,  Failures: 1
 ```
-* activity_no should be the path to the test class file. Eg: basic-java/CalculatorTest
+* ```activity_no``` should be the path to the test class file. Eg: ```basic-java/CalculatorTest```
 * Students must **compile** the answer before pushing to git
